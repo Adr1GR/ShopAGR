@@ -1,0 +1,17 @@
+com\mycompany\shopagr\JakartaRestConfiguration.class
+com\mycompany\shopagr\model\Categoria.class
+com\mycompany\shopagr\controller\AbstractController.class
+com\mycompany\shopagr\controller\OpcionController.class
+com\mycompany\shopagr\model\Opcion.class
+com\mycompany\shopagr\model\Tienda.class
+com\mycompany\shopagr\controller\IController.class
+com\mycompany\shopagr\controller\TiendaController.class
+com\mycompany\shopagr\model\Model.class
+com\mycompany\shopagr\controller\Controller.class
+com\mycompany\shopagr\controller\repository\MemoryRepository.class
+com\mycompany\shopagr\resources\JakartaEE91Resource.class
+com\mycompany\shopagr\controller\PromocionController.class
+com\mycompany\shopagr\model\ICopyable.class
+com\mycompany\shopagr\controller\CategoriaController.class
+com\mycompany\shopagr\controller\repository\IRepository.class
+com\mycompany\shopagr\model\Promocion.class

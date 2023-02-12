@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<faces-config version="3.0"
+              xmlns="https://jakarta.ee/xml/ns/jakartaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-facesconfig_3_0.xsd">
+
+    <!--general admin-->
+    <navigation-rule>
+        <from-view-id>/admin/*</from-view-id>
+        <navigation-case>
+            <from-outcome>categorias</from-outcome>
+            <to-view-id>/admin/categorias/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>tiendas</from-outcome>
+            <to-view-id>/admin/tiendas/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>promociones</from-outcome>
+            <to-view-id>/admin/promociones/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>categoriasPub</from-outcome>
+            <to-view-id>/public/categorias/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>tiendasPub</from-outcome>
+            <to-view-id>/public/tiendas/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>promocionesPub</from-outcome>
+            <to-view-id>/public/promociones/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <!--general public-->
+    <navigation-rule>
+        <from-view-id>/public/*</from-view-id>
+        <navigation-case>
+            <from-outcome>categoriasPub</from-outcome>
+            <to-view-id>/public/categorias/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>tiendasPub</from-outcome>
+            <to-view-id>/public/tiendas/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>promocionesPub</from-outcome>
+            <to-view-id>/public/promociones/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>categorias</from-outcome>
+            <to-view-id>/admin/categorias/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <!-- categorias -->
+    <navigation-rule>
+        <from-view-id>/admin/categorias/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>edit</from-outcome>
+            <to-view-id>/admin/categorias/edit.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>remove</from-outcome>
+            <to-view-id>/admin/categorias/deleted.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>create</from-outcome>
+            <to-view-id>/admin/categorias/create.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <!-- public categorias -->
+    <navigation-rule>
+        <from-view-id>/public/categorias/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>edit</from-outcome>
+            <to-view-id>/public/categorias/edit.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>remove</from-outcome>
+            <to-view-id>/public/categorias/deleted.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>create</from-outcome>
+            <to-view-id>/public/categorias/create.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/admin/categorias/edit.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>sucess</from-outcome>
+            <to-view-id>/admin/categorias/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>/admin/categorias/edit.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/admin/categorias/create.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>sucess</from-outcome>
+            <to-view-id>/admin/categorias/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>/admin/categorias/create.xhtml</to-view-id>
+        </navigation-case>  
+    </navigation-rule>
+
+    <!--promociones-->
+    <navigation-rule>
+        <from-view-id>/admin/promociones/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>edit</from-outcome>
+            <to-view-id>/admin/promociones/edit.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>remove</from-outcome>
+            <to-view-id>/admin/promociones/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>create</from-outcome>
+            <to-view-id>/admin/promociones/create.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/admin/promociones/edit.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>sucess</from-outcome>
+            <to-view-id>/admin/promociones/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>/admin/promociones/edit.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/admin/promociones/create.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>sucess</from-outcome>
+            <to-view-id>/admin/promociones/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>/admin/promociones/edit.xhtml</to-view-id>
+        </navigation-case>
+       
+    </navigation-rule>
+
+    <!--propiedades-->
+    <navigation-rule>
+        <from-view-id>/admin/tiendas/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>edit</from-outcome>
+            <to-view-id>/admin/tiendas/edit.xhtml</to-view-id>
+        </navigation-case>
+        
+         
+        <navigation-case>
+            <from-outcome>remove</from-outcome>
+            <to-view-id>/admin/tiendas/deleted.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>create</from-outcome>
+            <to-view-id>/admin/tiendas/create.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/admin/tiendas/edit.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>sucess</from-outcome>
+            <to-view-id>/admin/tiendas/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>remove</from-outcome>
+            <to-view-id>/admin/tiendas/edit.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>reload</from-outcome>
+            <to-view-id>/admin/tiendas/edit.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>edit</from-outcome>
+            <to-view-id>/admin/localidades/edit.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>create</from-outcome>
+            <to-view-id>/admin/localidades/create.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>/admin/propiedades/edit.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>imageadd</from-outcome>
+            <to-view-id>/admin/imagenes/edit.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    <navigation-rule>
+        <from-view-id>/admin/tiendas/create.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>sucess</from-outcome>
+            <to-view-id>/admin/tiendas/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>/admin/tiendas/create.xhtml</to-view-id>
+        </navigation-case>
+       
+    </navigation-rule>
+   
+    <navigation-rule>
+        <from-view-id>/admin/imagenes/edit.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>sucess</from-outcome>
+            <to-view-id>/admin/tiendas/edit.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>failure</from-outcome>
+            <to-view-id>/admin/imagenes/edit.xhtml</to-view-id>
+        </navigation-case>
+       
+    </navigation-rule>
+</faces-config>
